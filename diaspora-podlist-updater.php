@@ -45,7 +45,7 @@ class DiasporaPodlistUpdater {
 				array_push( $output, $pod['domain'] );
 			}
 		}
-		update_option( 'dpu-podlist', $output );
+		update_option( 'dpu-podlist', sort($output) );
 	}
 
 	function dpu_deactivation() {
