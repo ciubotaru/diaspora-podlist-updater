@@ -23,7 +23,7 @@ To get the podlist from another plugin, use the following reference code:
 
 `<?php $podlist = get_option('dpu-podlist'); ?>`
 
-The result is an array of Diaspora* server URLs.
+The result is an indexed array of Diaspora* server URLs.
 
 == Installation ==
 1. Unpack `share-on-diaspora.zip` and upload its contents to the `/wp-content/plugins/` directory
@@ -55,3 +55,6 @@ Once a day. To force an update, deactivate the plugin and activate it again.
 == Changelog ==
 = 0.0.1 =
 * First release
+
+= 0.0.2 =
+* Minor enhancements
