@@ -54,12 +54,8 @@ class DiasporaPodlistUpdater {
 		}
 		$podlist_clean = $podlist_raw['pods'];
 		$output = array();
-		foreach ( $podlist_clean as $pod ) {
-			//if ($pod['network'] == "Diaspora") {
-			if ( $pod['hidden'] == 'no' ) {
-				// array_push($output, $pod['host']);
-				array_push( $output, $pod['domain'] );
-			}
+		for ($i = 0; $i < $podlist_raw['podcount']; $i++) {
+			array_push( $output, $podlist_clean[$i]['domain'] );
 		}
 		update_option( 'dpu-podlist', sort($output) );
 	}
